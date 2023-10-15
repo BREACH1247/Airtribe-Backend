@@ -1,0 +1,31 @@
+version: "3.0"
+
+services:
+  web:
+    container_name: web
+    build: .
+    image: airtribe-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - PG_DB=admin
+      - PG_USER=admin
+      - PG_PASSWORD=password
+      - PG_HOST=db
+    depends_on:
+      - db
+
+  db:
+    container_name: db
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=admin
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+
+volumes:
+  postgres-db:
