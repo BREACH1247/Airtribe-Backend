@@ -37,7 +37,7 @@ PG_NAME=test
 **3. Build Docker Compose Configuration:**
 
 ```
-docker-compose build
+docker compose build
 ```
 
 *This command will build a network and containers for your webserver and the associated database.*
@@ -47,7 +47,7 @@ docker-compose build
 **4. Start the Webservice and the Database for the First Time:**
 
 ```
-docker-compose up
+docker compose up
 ```
 
   
@@ -55,7 +55,7 @@ docker-compose up
 **5. Stop the Docker Compose Services:**
 
 ```
-docker-compose down
+docker compose down
 ```
 
   
@@ -63,7 +63,7 @@ docker-compose down
 **6. Start the Webservice and Database Again:**
 
 ```
-docker-compose up
+docker compose up
 ```
 
 *Now your service is ready to use as the database is ready to accept connections.*
